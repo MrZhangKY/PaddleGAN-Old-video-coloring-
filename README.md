@@ -142,7 +142,7 @@ def display(driving, fps, size=(8, 6)):
 
 ```python
 # 展示一下输入的视频, 如果视频太大，时间会非常久，可以跳过这个步骤
-video_path = '/home/aistudio/太阳出来照四方.mp4'
+video_path = '/data/太阳出来照四方.mp4'
 video_frames = imageio.mimread(video_path, memtest=False)
 
 # 获得视频的原分辨率
@@ -159,9 +159,9 @@ HTML(display(video_frames, fps).to_html5_video())
 # output表示处理后的视频的存放文件夹
 # proccess_order 表示使用的模型和顺序（目前支持）
 %cd /home/aistudio/PaddleGAN/applications/
-!python tools/video-enhance.py --input /home/aistudio/太阳出来照四方.mp4 \
+!python tools/video-enhance.py --input /data/太阳出来照四方.mp4 \
                                --process_order DAIN DeOldify EDVR \
-                               --output /home/aistudio/金曲传唱
+                               --output /data/金曲传唱
 ```
 
 ```python
